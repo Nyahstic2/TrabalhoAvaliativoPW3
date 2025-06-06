@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jqueryMask.js"></script>
+    <script src="./js/form.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('#cep').mask('00000-000');
+            $('#tel').mask('(00) 0000-0000');
+            $('#cpf').mask('000.000.000-00', {reverse: true});
+            $('#rg').mask('00.000.000-0', {reverse: true});
+            $('#btnDone').click(continuarForm);
+        });
+    </script>
+</head>
+<body>
+    <div id="register">
+        <h1>Registrar uma conta</h1>
+        <form id="registerForm">
+            <div class="registerPart" id="p1">
+                <label>
+                    Nome
+                    <input id="nome" type="text" autocomplete="off" placeholder="Ex. Marco Silva da Silva" required>
+                </label>
+                <label>
+                    E-mail
+                    <input type="email" autocomplete="off" id="email" placeholder="example-person@example.com" required>
+                </label>
+                <label>
+                    Senha
+                    <input id="senha" type="password" autocomplete="off" placeholder="Use uma senha forte" required>
+                </label>
+                <label>
+                    Confirmar Senha
+                    <input id="senhaCon" type="password" autocomplete="off" placeholder="Use uma senha forte" required>
+                </label>
+            </div>
+            <div class="registerPart" id="p2" hidden>
+                <label>
+                    RG
+                    <input id="rg" type="text" autocomplete="off" placeholder="00.000.000-0" required>
+                </label>
+                <label>
+                    CPF
+                    <input id="cpf" type="text" autocomplete="off" placeholder="000.000.000-00" required>
+                </label>
+                <label>
+                    Telefone
+                    <input id="tel" type="text" autocomplete="off" placeholder="(00) 00000-0000" required>
+                </label>
+                <label>
+                    CEP
+                    <input id="cep" type="text" autocomplete="off" placeholder="00000-000" required>
+                </label>
+            </div>
+            <label id="RegisterStage" style="text-align: center;">Passo 1 de 2</label>
+        </form>
+        <button id="btnDone">Continuar</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* Reset básico para remover margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definir uma fonte mais moderna */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Contêiner principal */
+#register {
+    margin-left: 5vw;
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilização do título */
+h1 {
+    font-size: 2.5rem;
+    color: #5A5A5A;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Estilo para o formulário e seus campos */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para as labels */
+label {
+    font-size: 1rem;
+    text-align: left;
+    color: #777;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Estilo para os inputs */
+input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4f8a8b;
+    box-shadow: 0 0 5px rgba(79, 138, 139, 0.3);
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #4f8a8b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #3b6f6f;
+}
+
+/* Estilo para a barra de progresso do cadastro */
+#RegisterStage {
+    color: #999;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+/* Estilo para as partes do formulário (visíveis ou não) */
+.registerPart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Efeito de transição para o formulário de segunda etapa */
+.registerPart[hidden] {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+/* Adicionar uma cor suave para o fundo do botão e input em foco */
+input:focus, button:focus {
+    outline: none;
+}
+
+/* Estilização para quando o formulário estiver em transição (campo oculto) */
+#registerForm div[hidden] {
+    display: none;
+}
+
